@@ -1,12 +1,12 @@
 import { ImageBackground, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import {StatusBar} from 'react-native';
 
-export default function Onboarding() {
+export default function Onboarding({navigation}) {
   return (
-    <ImageBackground style={styles.bg} source={require('../assets/bg_onboarding.png')}>
+    <ImageBackground style={styles.bg} source={require('../assets/images/bg_onboarding.png')}>
       <StatusBar barStyle="light-content"/>
       <View style={styles.container}>
-        <TouchableOpacity style={styles.button1}>
+        <TouchableOpacity style={styles.button1} onPress={() => navigation.navigate("Login")}>
           <Text style={styles.textButton1}>Entrar na minha conta</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button2}>
